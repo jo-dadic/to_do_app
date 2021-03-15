@@ -24,7 +24,7 @@ export default class ToDoList extends Component {
   };
 
   //deleting tasks:
-  deleteHandler = () => {
+  deleteHandler = (id) => {
     const updatedList = this.state.todolist.filter((todo) => todo.id !== id);
     this.setState({ todolist: updatedList });
   };
@@ -47,18 +47,42 @@ export default class ToDoList extends Component {
     this.setState({ todolist: clearedList });
   };
 
+  //filter items:
+  filterHandler = () => {
+    switch (this.state.filter) {
+      case FilterState.ACTIVE:
+        return this.state.todolist.filter((todo) => todo.completed === false);
+      case FilterState.COMPLETED:
+        return this.state.todolist.filter((todo) => todo.completed === true);
+      case FilterState.NONE:
+        return [];
+      default:
+        return this.state.todolist;
+    }
+  };
+
+  filter = (fs) => {
+    this.setState({ filter: fs });
+  };
+
   render() {
     return (
       <div className="ToDoList">
         <p>Hello</p>
         <AddNewItem onAdd={this.addHandler} />
-        <Filter />
-        <ToDoItem
-          key={todo.id}
-          todo={todo}
-          onDelete={this.deleteHandler}
-          onCompleted={this.checkCompletedHandler}
-        />
+        <Filter currentFilter={this.state.filter} onFilter={this.filter} />
+        <br />
+        {this.filterHandler().map((todo) => {
+          return (
+            <ToDoItem
+              key={todo.id}
+              todo={todo}
+              onDelete={this.deleteHandler}
+              onCompleted={this.checkCompletedHandler}
+            />
+          );
+        })}
+
         <button onClick={this.clearCompletedHandler}>Clear Completed</button>
       </div>
     );
