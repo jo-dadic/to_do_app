@@ -1,18 +1,20 @@
 .App {
   text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
+  margin: 0 auto;
+  display: block;
+  width: 1170px;
+  background: url('./images/paper-1763262.png');
+  background-size: cover;
+  font-family: 'Syne Mono', monospace;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Container {
+  padding-top: 60px;
 }
+
+.Container h1 {
+  font-size: 3em;
+  padding-bottom: 20px;
+}
+

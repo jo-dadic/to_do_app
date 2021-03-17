@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./AddNewItem.css";
+
 export default function AddNewItem({ onAdd }) {
   //useState hook
   const [newToDoTxt, setNewToDoTxt] = useState("");
@@ -23,10 +25,15 @@ export default function AddNewItem({ onAdd }) {
   };
 
   return (
-    <div>
-      <input type="text" value={newToDoTxt} onChange={ToDoInputHandler} />
-      <button tyle="submit" onClick={addHandler}>
-        Add New Item
+    <div className="formContainer">
+      <input
+        type="text"
+        placeholder="Type here"
+        value={newToDoTxt}
+        onChange={ToDoInputHandler}
+      />
+      <button type="submit" onClick={addHandler}>
+        Add New Task
       </button>
     </div>
   );

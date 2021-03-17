@@ -54,8 +54,6 @@ export default class ToDoList extends Component {
         return this.state.todolist.filter((todo) => todo.completed === false);
       case FilterState.COMPLETED:
         return this.state.todolist.filter((todo) => todo.completed === true);
-      case FilterState.NONE:
-        return [];
       default:
         return this.state.todolist;
     }
@@ -67,23 +65,25 @@ export default class ToDoList extends Component {
 
   render() {
     return (
-      <div className="ToDoList">
-        <p>Hello</p>
+      <div>
         <AddNewItem onAdd={this.addHandler} />
         <Filter currentFilter={this.state.filter} onFilter={this.filter} />
         <br />
-        {this.filterHandler().map((todo) => {
-          return (
-            <ToDoItem
-              key={todo.id}
-              todo={todo}
-              onDelete={this.deleteHandler}
-              onCompleted={this.checkCompletedHandler}
-            />
-          );
-        })}
-
-        <button onClick={this.clearCompletedHandler}>Clear Completed</button>
+        <div className="ToDoList">
+          {this.filterHandler().map((todo) => {
+            return (
+              <ToDoItem
+                key={todo.id}
+                todo={todo}
+                onDelete={this.deleteHandler}
+                onCompleted={this.checkCompletedHandler}
+              />
+            );
+          })}
+        </div>
+        <button className="clear" onClick={this.clearCompletedHandler}>
+          Clear Completed
+        </button>
       </div>
     );
   }

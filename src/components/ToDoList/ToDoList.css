@@ -1,0 +1,37 @@
+.ToDoList {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.ToDoList button {
+    border-radius: 12%;
+    font-size: 30px;
+    margin-left: 15px;
+    padding: 0 0;
+    width: 25px;
+    height: 30px;
+    line-height: 0;
+}
+
+.ToDoList button:hover{
+    background-color: #ff6347;
+    color: white;
+}
+
+.clear {
+    margin: 0 auto;
+    width: 18%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.clear:hover {
+    box-shadow: 0 10px 13px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

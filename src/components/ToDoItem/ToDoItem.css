@@ -1,0 +1,8 @@
+.ToDoItem {
+    display: flex;
+    margin: 0 auto;
+}
+
+.ToDoItem:hover {
+    font-weight: 600;
+}

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { FilterState } from "./FilterState";
 
 import "./Filter.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class Filter extends Component {
   basicStyle = { color: "" };
@@ -16,7 +17,7 @@ export default class Filter extends Component {
     if (styleAsked === this.props.currentFilter) {
       return { color: "#ff6347" };
     } else {
-      return { color: "#00bfff" };
+      return { color: "#000" };
     }
   };
 
@@ -40,12 +41,6 @@ export default class Filter extends Component {
           style={this.getStyle(FilterState.COMPLETED)}
         >
           Completed
-        </span>
-        <span
-          onClick={() => this.onFilterChange(FilterState.NONE)}
-          style={this.getStyle(FilterState.NONE)}
-        >
-          None
         </span>
       </div>
     );

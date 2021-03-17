@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./ToDoItem.css";
+
 export default function ToDoItem({ todo, onDelete, onCompleted }) {
   //basic style:
   let basicStyle = { cursor: "pointer", marginRight: 10 };
