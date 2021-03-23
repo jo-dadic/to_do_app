@@ -80,6 +80,7 @@ export default class ToDoList extends Component {
         <AddNewItem onAdd={this.addHandler} />
         <Filter currentFilter={this.state.filter} onFilter={this.filter} />
         <br />
+        <hr />
         <div className="ToDoList">
           {this.filterHandler().map((todo) => {
             return (
