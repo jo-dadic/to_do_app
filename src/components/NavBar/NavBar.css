@@ -47,6 +47,7 @@
 
 .sign-up .btn:hover {
   color: #000;
+  cursor: not-allowed !important;
 }
 
 /* 578px */

@@ -67,7 +67,10 @@ export default class ToDoList extends Component {
   render() {
     let button = null;
 
-    if (this.state.filter === FilterState.COMPLETED) {
+    if (
+      this.state.filter === FilterState.COMPLETED ||
+      (FilterState.ALL && this.state.filter !== FilterState.ACTIVE)
+    ) {
       button = (
         <Button buttonSize="btn--large" onClick={this.clearCompletedHandler}>
           Clear Completed
@@ -93,6 +96,7 @@ export default class ToDoList extends Component {
             );
           })}
         </div>
+        <hr />
         {button}
       </div>
     );
