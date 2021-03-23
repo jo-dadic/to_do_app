@@ -4,14 +4,13 @@
 
 .btn {
   padding: 8px 20px;
-  border-radius: 2px;
+  border-radius: 3px;
   outline: none;
   border: none;
   cursor: pointer;
 }
 
 .btn--primary {
-  background-color: var(--primary);
   color: #242424;
   border: 1px solid var(--primary);
 }
