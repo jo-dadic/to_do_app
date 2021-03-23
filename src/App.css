@@ -2,10 +2,8 @@
   text-align: center;
   margin: 0 auto;
   display: block;
-  width: 1170px;
-  background: url('./images/paper-1763262.png');
-  background-size: cover;
-  font-family: 'Syne Mono', monospace;
+  width: 100%;
+  font-family: "Syne Mono", monospace;
   min-height: 100vh;
 }
 
@@ -13,8 +11,18 @@
   padding-top: 60px;
 }
 
-.Container h1 {
+/* .Container h1 {
   font-size: 3em;
   padding-bottom: 20px;
+} */
+
+/* 1200px */
+@media (max-width: 73.125em) {
+  .App {
+    width: 100%;
+  }
 }
 
+/* 578px */
+@media (max-width: 36.125em) {
+}

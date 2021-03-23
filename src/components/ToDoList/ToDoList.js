@@ -4,6 +4,7 @@ import ToDoItem from "../ToDoItem/ToDoItem";
 import AddNewItem from "../AddNewItem/AddNewItem";
 import Filter from "../Filter/Filter";
 import { FilterState } from "../Filter/FilterState";
+import { Button } from "../Button/Button";
 
 import "./ToDoList.css";
 
@@ -68,9 +69,9 @@ export default class ToDoList extends Component {
 
     if (this.state.filter === FilterState.COMPLETED) {
       button = (
-        <button className="clear" onClick={this.clearCompletedHandler}>
+        <Button buttonSize="btn--large" onClick={this.clearCompletedHandler}>
           Clear Completed
-        </button>
+        </Button>
       );
     }
 

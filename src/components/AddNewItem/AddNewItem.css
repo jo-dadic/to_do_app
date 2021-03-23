@@ -1,31 +1,35 @@
 .formContainer {
-    padding-bottom: 35px;
-    font-size: 1.3em;
+  padding-bottom: 35px;
+  font-size: 1.3em;
 }
 
 .formContainer input {
-    width: 40%;
-    margin-right: 15px;
-    padding: 7px 5px;
-    box-sizing: border-box;
-    border: 1px solid #000;
-    border-radius: 10px;
-    outline: none;
-    transition: 0.5s;
+  width: 30%;
+  padding: 8px 20px;
+  border-radius: 2px;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border: 1px solid #555;
 }
 
-.formContainer input:focus {
-    border: 2px solid #555;
+.formContainer input::placeholder {
+  color: #b1b1b1;
 }
 
 .formContainer button {
-    background: #a9a9a9;
-    color: #000;
-    border-radius: 5px;
-    transition: 0.5s;
+  font-size: 1em;
+  border: 1px solid #ff6347;
 }
 
 .formContainer button:hover {
-    box-shadow: 0 10px 13px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 10px 13px 0 rgba(169, 3, 41, 0.24),
+    0 17px 50px 0 rgba(169, 3, 41, 0.19);
+}
 
+.formContainer button:focus {
+  outline: none;
+  box-shadow: none;
 }

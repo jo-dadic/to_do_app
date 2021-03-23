@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { Button } from "../Button/Button";
+
 import "./AddNewItem.css";
 
 export default function AddNewItem({ onAdd }) {
@@ -32,9 +34,9 @@ export default function AddNewItem({ onAdd }) {
         value={newToDoTxt}
         onChange={ToDoInputHandler}
       />
-      <button type="submit" onClick={addHandler}>
+      <Button buttonSize="btn--large" type="submit" onClick={addHandler}>
         Add New Task
-      </button>
+      </Button>
     </div>
   );
 }

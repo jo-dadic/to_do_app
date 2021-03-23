@@ -1,0 +1,55 @@
+.navbar {
+  background: rgb(169, 3, 41); /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(169, 3, 41, 1) 0%,
+    rgba(143, 2, 34, 1) 44%,
+    rgba(109, 0, 25, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 8px 20px;
+}
+
+.heading h1 {
+  color: #fff;
+  font-size: 2.5em;
+  padding-bottom: 20px;
+}
+
+.sign-up .btn {
+  margin-top: -30px;
+  color: #fff;
+  font-size: 1em;
+}
+
+.sign-up .btn:hover {
+  color: #000;
+}
+
+@media (max-width: 620px) {
+  .heading span {
+    display: none;
+  }
+}
