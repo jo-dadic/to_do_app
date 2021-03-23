@@ -2,7 +2,8 @@
     background: url('./images/paper-1763262.png');
 } */
 
-html, body {
-    height: 100%;
-  }
-  
+html,
+body {
+  height: 100%;
+  width: 100%;
+}

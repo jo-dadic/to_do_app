@@ -33,3 +33,15 @@
   outline: none;
   box-shadow: none;
 }
+
+/* 578px */
+@media (max-width: 36.125em) {
+  .formContainer button {
+    width: 30%;
+    padding: 0;
+  }
+
+  .formContainer input {
+    width: 50%;
+  }
+}

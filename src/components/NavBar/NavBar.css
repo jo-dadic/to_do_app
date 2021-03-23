@@ -48,7 +48,8 @@
   color: #000;
 }
 
-@media (max-width: 620px) {
+/* 578px */
+@media (max-width: 37.125em) {
   .heading span {
     display: none;
   }

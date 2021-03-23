@@ -1,8 +1,17 @@
 .Filter {
-    cursor: pointer;
-   font-size: 2em;
+  cursor: pointer;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
 }
 
 .Filter span {
-    margin-right: 30px;
+  margin-right: 30px;
+}
+
+/* 578px */
+@media (max-width: 36.125em) {
+  .Filter {
+    flex-direction: column;
+  }
 }
